@@ -1,6 +1,6 @@
 import open3d
 import numpy as np
-from grasp_proposal.eval_experiment import config
+from eval_experiment import config
 import copy
 from .math_utils import transformation_inv
 

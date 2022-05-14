@@ -5,17 +5,17 @@ import open3d
 import time
 import torch
 import torch.nn as nn
-from grasp_proposal.cloud_processor.cloud_processor import CloudPreProcessor
-from grasp_proposal.configs.yacs_config import load_cfg_from_file
-from grasp_proposal.network_models.models.build_model import build_model
-from grasp_proposal.utils.checkpoint import CheckPointer
-from grasp_proposal.utils.file_logger_cls import loggin_to_file
-from grasp_proposal.utils.grasp_visualizer import GraspVisualizer
-from grasp_proposal.utils.logger import setup_logger, MetricLogger
+from cloud_processor.cloud_processor import CloudPreProcessor
+from configs.yacs_config import load_cfg_from_file
+from network_models.models.build_model import build_model
+from utils.checkpoint import CheckPointer
+from utils.file_logger_cls import loggin_to_file
+from utils.grasp_visualizer import GraspVisualizer
+from utils.logger import setup_logger, MetricLogger
 
 
 def load_static_data_batch():
-    single_training_data = np.load("/home/sim/project/s4g/2638_view_0.p", allow_pickle=True)
+    single_training_data = np.load("/home/xinchaosong/Organized-Source-Code-Local/s4g-release/inference/2638_view_0.p", allow_pickle=True)
     cloud_array = single_training_data["point_cloud"]
     cloud = CloudPreProcessor(open3d.geometry.PointCloud(open3d.utility.Vector3dVector(cloud_array.T)), False)
 

@@ -1,6 +1,6 @@
 import numpy as np
 import open3d
-from grasp_proposal.configs import processing_config as config
+from configs import processing_config as config
 
 
 class CloudPreProcessor:

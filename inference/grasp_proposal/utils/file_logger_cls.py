@@ -188,7 +188,7 @@ def loggin_to_file(data_batch, preds, step, output_dir, prefix="", with_label=Tr
         # np.savetxt(osp.join(step_dir, "movable.txt"), movable_logits.T, fmt="%.2f")
 
         if not with_label:  # save top frames for real experiments
-            from grasp_proposal.eval_experiment.eval_point_cloud import EvalExpCloud
+            from eval_experiment.eval_point_cloud import EvalExpCloud
             view_cloud = open3d.geometry.PointCloud()
             view_cloud.points = open3d.utility.Vector3dVector(scene_points)
             evaluation_point_cloud = EvalExpCloud(view_cloud)
