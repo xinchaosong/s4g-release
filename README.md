@@ -62,6 +62,14 @@ Data generation contains several steps:
 Random Scene Generation, Viewed Point Rendering, Scene(Complete) Point Generation, Grasp Pose Searching, Grasp Pose Post Processing
 For more details, you can refer to the directory of [data_gen](data_gen).
 
+dataset_utils.py
+
+generate_simulation.py --start 0 --end 10 --process 1
+
+generate_scene.py --start 0 --end 1 --mode point_cloud
+
+generate_fast_training_data.py --start 0 --end 10 --process 0
+
 ## Bibtex
 
 ```
